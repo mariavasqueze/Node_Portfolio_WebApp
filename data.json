@@ -1,0 +1,30 @@
+{
+   "projects": [
+        {
+            "id": 0,
+            "project_name": "Random quote generator",
+            "description": "Generate a random quote from main array by clicking the button",
+            "technologies": ["JavaScript", "DOM"],
+            "image_urls": ["/images/image1.png", "/images/image2.jpg"],
+            "github_repository": "https://github.com/mariavasqueze/random_quote_slideshow_JS"
+        },
+
+        {
+            "id": 1,
+            "project_name": "List pagination site",
+            "description": "Create pages for list, show max amount of numbers per page",
+            "technologies": ["JavaScript", "DOM"],
+            "image_urls": ["/images/image1.png", "/images/image2.jpg"],
+            "github_repository": "https://github.com/mariavasqueze/Pagination_In_JS"
+        },
+
+        {
+            "id": 2,
+            "project_name": "BMI Calculator",
+            "description": "Calculate bmi with user input",
+            "technologies": ["node.js", "express", "ejs", "body-parser"],
+            "image_urls": ["/images/image1.png", "/images/image2.jpg"],
+            "github_repository": "https://github.com/mariavasqueze/BMI_Form"
+        }
+    ]
+}
