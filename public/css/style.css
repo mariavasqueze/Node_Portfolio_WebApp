@@ -148,3 +148,10 @@ a:hover{
 .portfolio-bio{
     line-height: 25px;
 }
+
+.error{
+  text-align: center;
+  background-color: darkgrey;
+  color: darkmagenta;
+  padding-top: 100px;
+}

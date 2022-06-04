@@ -1,5 +1,6 @@
 const express = require('express');
 let jsonData= require('./data.json');
+
 const { append } = require('express/lib/response');
 
 const app = express();
@@ -14,11 +15,11 @@ app.set('view engine', 'pug');
 
 //Get pages (get method for each page)
 app.get("/", (req, res) => {
-    res.render('index', {name: "Maria Vasquez"});
+    res.render('index', {name: "Maria Vasquez", json: jsonData});
 })
 
 app.get("/project", (req, res) => {
-    res.render('project');
+    res.render('project', {json: jsonData});
 })
 
 app.get("/index", (req, res) => {
