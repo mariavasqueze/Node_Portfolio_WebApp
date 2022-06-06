@@ -28,6 +28,7 @@ app.get("/about", (req, res) => {
 app.get("/project:projectName", (req, res) => {
     const projectTitle = req.params.projectName;
 
+    // if a page is selected, load all the information related to that project, template is project.pug
     jsonData.projects.forEach(project => {
         const storedTitle = project['project_name'];
 
@@ -43,7 +44,6 @@ app.get("/project:projectName", (req, res) => {
     });
 
 })
-
 
 // Handle error pages 
 app.use((req, res, next) => {
