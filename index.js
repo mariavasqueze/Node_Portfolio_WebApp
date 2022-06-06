@@ -1,4 +1,5 @@
 const express = require('express');
+const { redirect } = require('express/lib/response');
 let jsonData= require('./data.json');
 
 const app = express();
@@ -24,11 +25,23 @@ app.get("/about", (req, res) => {
     res.render('about', {name: "Maria Vasquez"});
 })
 
-app.get("/project:project1", (req, res) => {
-    const projectTitle = req.params.project1;
-    
+app.get("/project:projectName", (req, res) => {
+    const projectTitle = req.params.projectName;
 
-    res.render('project', {json: jsonData});
+    jsonData.projects.forEach(project => {
+        const storedTitle = project['project_name'];
+
+        if(storedTitle == projectTitle){
+            const description = project['description']
+            const techonologies = project['technologies']
+            const images = project['image_urls']
+            const github = project['github_repository']
+            const demo = project['live_demo']
+
+            res.render('project', {json: jsonData, title: projectTitle, description: description, techonologies: techonologies, images: images, github: github, demo: demo})
+        }
+    });
+
 })
 
 

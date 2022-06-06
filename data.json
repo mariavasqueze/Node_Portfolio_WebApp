@@ -5,17 +5,19 @@
             "project_name": "Random quote generator",
             "description": "Generate a random quote from main array by clicking the button",
             "technologies": ["JavaScript", "DOM"],
-            "image_urls": ["/randomOne.png", "/randomTwo.png"],
-            "github_repository": "https://github.com/mariavasqueze/random_quote_slideshow_JS"
+            "image_urls": ["/randomOne.png", "/randomTwo.png", "/randomThree.png"],
+            "github_repository": "https://github.com/mariavasqueze/random_quote_slideshow_JS",
+            "live_demo": "https://mariavasqueze.github.io/random_quote_slideshow_JS/"
         },
 
         {
             "id": 1,
             "project_name": "List pagination site",
             "description": "Create pages for list, show max amount of numbers per page",
-            "technologies": ["JavaScript", "DOM"],
-            "image_urls": ["/paginationOne.png", "/paginationTwo.png"],
-            "github_repository": "https://github.com/mariavasqueze/Pagination_In_JS"
+            "technologies": ["JavaScript", "DOM", "Methods"],
+            "image_urls": ["/paginationOne.png", "/paginationTwo.png", "/paginationThree.png"],
+            "github_repository": "https://github.com/mariavasqueze/Pagination_In_JS",
+            "live_demo": "https://mariavasqueze.github.io/Pagination_In_JS/"
         },
 
         {
@@ -23,8 +25,9 @@
             "project_name": "BMI Calculator",
             "description": "Calculate bmi with user input",
             "technologies": ["node.js", "express", "ejs", "body-parser"],
-            "image_urls": ["/bmiOne.png", "/bmiTwo.jpg", "/bmiThree.png"],
-            "github_repository": "https://github.com/mariavasqueze/BMI_Form"
+            "image_urls": ["/bmiOne.png", "/bmiTwo.png", "/bmiThree.png"],
+            "github_repository": "https://github.com/mariavasqueze/BMI_Form",
+            "live_demo": ""
         }
     ]
 }
