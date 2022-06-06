@@ -1,12 +1,10 @@
 const express = require('express');
 let jsonData= require('./data.json');
 
-const { append } = require('express/lib/response');
-
 const app = express();
 const port = 3000;
 
-// Use css
+// Read css files
 app.use('/static', express.static('public'))
 app.use(express.static('public/images'));
 
@@ -18,17 +16,21 @@ app.get("/", (req, res) => {
     res.render('index', {name: "Maria Vasquez", json: jsonData});
 })
 
-app.get("/project", (req, res) => {
-    res.render('project', {json: jsonData});
-})
-
 app.get("/index", (req, res) => {
     res.render('layout');
 })
 
 app.get("/about", (req, res) => {
-    res.render('about');
+    res.render('about', {name: "Maria Vasquez"});
 })
+
+app.get("/project:project1", (req, res) => {
+    const projectTitle = req.params.project1;
+    
+
+    res.render('project', {json: jsonData});
+})
+
 
 // Handle error pages 
 app.use((req, res, next) => {
@@ -41,20 +43,7 @@ app.use((req, res, next) => {
     res.render('error', {error: err});
   });
 
-
+// listen to port 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
 })
-
-/*
-
-app.post("/", (req, res) => {
-    let weight = parseFloat(req.body.weight);
-    let height = parseFloat(req.body.height);
-    let bmi = weight / Math.pow((height / 100), 2);
-    bmi = bmi.toFixed(1);
-
-    res.render('bmi', {bmiResult: "Your bmi is: " + bmi});
-})
-
-*/
